@@ -1,0 +1,130 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: $backgraundColor;
+    font-family: $rubik;
+    @include flexColumn;
+}
+
+.container{
+    @include flexColumn;
+    height: 80%;
+    width: 80%;
+    justify-content: space-between;
+
+    &--header{
+        height: 15%;
+        width: 100%;
+        @include flex;
+        justify-content: flex-start;
+        border-bottom: 20px solid $borderColor;
+        border-radius: 10px;
+        
+        &--title{
+            color: $borderColor;
+            font-size: calculadora-rem(70);
+            margin-right: 500px;
+        }
+
+        &--about{
+            color: $borderColor;
+            font-size: calculadora-rem(30);
+            position: relative;
+            cursor: pointer;
+        }
+
+        &--about-wrapper{
+            display: none;
+        }
+
+        &:hover {
+            .container--header--about-wrapper{
+                @include flexColumn;
+                height: 400px;
+                width: 600px;
+                position: absolute;
+                transform: translateY(250px) translateX(850px);
+                color: $textColor;
+                font-size: calculadora-rem(22);
+                border-top: 20px solid $borderColor;
+                border-radius: 0 30px 30px 30px;
+                box-sizing: border-box;
+                padding: 20px 20px;
+                background-color: $backgraundColorOpacity;
+                line-height: 30px;
+
+                &--source{
+                    color: $borderColor;
+                    font-weight: 600;
+                }
+            }
+            
+        }
+    }
+
+    &--main{
+        height: 80%;
+        width: 100%;
+        @include flexColumn;
+        color: $textColor;
+        font-size: calculadora-rem(40);
+
+        &--input-wrapper{
+            @include flexColumn;
+            margin-bottom: 50px;
+
+            &--label{
+                margin-bottom: 10px;
+            }
+
+            &--input{
+                height: 50px;
+                width: 500px;
+                box-sizing: border-box;
+                padding-left: 20px;
+                font-size: calculadora-rem(20);
+                border: 1px solid $borderColor;
+                border-radius: 10px;
+                color: $borderColor;
+                outline: none;
+
+                &::placeholder{
+                    color: $borderColor;
+                }
+
+                &:focus{
+                    box-shadow: 0 0 30px $shadowColor;
+                }
+            }
+        }
+
+        &--result{
+            border-bottom: 1px solid $borderColor;
+            margin-bottom: 100px;
+        }
+
+        &--button-wrapper{
+            @include flex;
+
+            &--button-all{
+                height: 70px;
+                width: 250px;
+                margin: 0 80px;
+                font-size: calculadora-rem(30);
+                color: $borderColor;
+                background-color: $buttonColor;
+                border: 1px solid $borderColor;
+                border-radius: 35px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: transparent;
+                    box-shadow: 0 0 30px $shadowColor;
+                }
+            }
+        }
+    }
+}
