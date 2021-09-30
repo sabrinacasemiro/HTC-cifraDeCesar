@@ -16,6 +16,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: auto;
 }
 
 .container {
@@ -188,7 +189,7 @@ body {
 .container--main--result {
   border-bottom: 1px solid #160B26;
   margin-bottom: 100px;
-  height: 50px;
+  height: 35px;
 }
 
 .container--main--button-wrapper {
@@ -219,5 +220,102 @@ body {
   background-color: transparent;
   -webkit-box-shadow: 0 0 30px #160B2680;
           box-shadow: 0 0 30px #160B2680;
+}
+
+@media (max-width: 1366px) {
+  .container--header {
+    border-bottom: 15px solid #160B26;
+    border-radius: 8px;
+  }
+  .container--header--title {
+    font-size: 3.125rem;
+    margin-right: 300px;
+  }
+  .container--header--story {
+    font-size: 1.25rem;
+  }
+  .container--header--story:hover .container--header--about-wrapper {
+    height: 250px;
+    width: 400px;
+    -webkit-transform: translateY(28px) translateX(-150px);
+            transform: translateY(28px) translateX(-150px);
+    font-size: 0.9375rem;
+    border-top: 15px solid #160B26;
+    border-radius: 0 30px 30px 30px;
+    padding: 10;
+    line-height: 20px;
+  }
+  .container--main {
+    font-size: 1.875rem;
+  }
+  .container--main--input-wrapper {
+    margin-bottom: 40px;
+  }
+  .container--main--input-wrapper--input {
+    height: 40px;
+    width: 400px;
+    font-size: 1.125rem;
+    border-radius: 7px;
+  }
+  .container--main--input-wrapper--input:focus {
+    -webkit-box-shadow: 0 0 20px #160B2680;
+            box-shadow: 0 0 20px #160B2680;
+  }
+  .container--main--result {
+    margin-bottom: 60px;
+    height: 27px;
+  }
+  .container--main--button-wrapper--button-all {
+    height: 50px;
+    width: 150px;
+    margin: 0 50px;
+    font-size: 0.9375rem;
+    border-radius: 20px;
+  }
+  .container--main--button-wrapper--button-all:hover {
+    -webkit-box-shadow: 0 0 20px #160B2680;
+            box-shadow: 0 0 20px #160B2680;
+  }
+}
+
+@media (max-width: 375px) {
+  .container--header {
+    border-bottom: 10px solid #160B26;
+    border-radius: 5px;
+  }
+  .container--header--title {
+    font-size: 1.875rem;
+    margin-right: 30px;
+  }
+  .container--header--story {
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  .container--header--story:hover .container--header--about-wrapper {
+    height: 300px;
+    width: 305px;
+    -webkit-transform: translateY(33px) translateX(-239px);
+            transform: translateY(33px) translateX(-239px);
+    font-size: 0.9375rem;
+    border-top: 10px solid #160B26;
+    border-radius: 0 0 30px 30px;
+    padding: 20;
+    white-space: normal;
+  }
+  .container--main {
+    font-size: 1.25rem;
+  }
+  .container--main--input-wrapper--input {
+    height: 35px;
+    width: 300px;
+    font-size: 0.9375rem;
+  }
+  .container--main--button-wrapper--button-all {
+    height: 40px;
+    width: 100px;
+    margin: 0 50px;
+    font-size: 0.9375rem;
+    border-radius: 18px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

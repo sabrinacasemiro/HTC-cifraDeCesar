@@ -7,6 +7,7 @@ body{
     background-color: $backgraundColor;
     font-family: $rubik;
     @include flexColumn;
+    overflow: auto
 }
 
 .container{
@@ -104,8 +105,7 @@ body{
         &--result{
             border-bottom: 1px solid $borderColor;
             margin-bottom: 100px;
-            height: 50px;
-
+            height: 35px;
         }
 
         &--button-wrapper{
@@ -125,8 +125,141 @@ body{
                 &:hover{
                     background-color: transparent;
                     box-shadow: 0 0 30px $shadowColor;
+                    
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1366px){
+    .container{
+        &--header{
+            border-bottom: 15px solid $borderColor;
+            border-radius: 8px;
+
+            &--title{
+                font-size: calculadora-rem(50);
+                margin-right: 300px;
+            }
+
+            &--story{
+                font-size: calculadora-rem(20);
+
+                &:hover{
+                    .container--header--about-wrapper{
+                        height: 250px;
+                        width: 400px;
+                        transform: translateY(28px) translateX(-150px);
+                        font-size: calculadora-rem(15);
+                        border-top: 15px solid $borderColor;
+                        border-radius: 0 30px 30px 30px;
+                        padding: 10;
+                        line-height: 20px;
+                    }
+                    
+                }
+            }
+        }
+
+        &--main{
+            font-size: calculadora-rem(30);
+
+            &--input-wrapper{
+                margin-bottom: 40px;
+
+                &--input{
+                    height: 40px;
+                    width: 400px;
+                    font-size: calculadora-rem(18);
+                    border-radius: 7px;
+    
+                    &:focus{
+                        box-shadow: 0 0 20px $shadowColor;
+                    }
+                }
+            }
+
+            &--result{
+                margin-bottom: 60px;
+                height: 27px;
+            }
+    
+            &--button-wrapper{
+    
+                &--button-all{
+                    height: 50px;
+                    width: 150px;
+                    margin: 0 50px;
+                    font-size: calculadora-rem(15);
+                    border-radius: 20px;
+    
+                    &:hover{
+                        box-shadow: 0 0 20px $shadowColor;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media(max-width: 375px){
+    .container{
+
+        &--header{
+            border-bottom: 10px solid $borderColor;
+            border-radius: 5px;
+
+            &--title{
+                font-size: calculadora-rem(30);
+                margin-right: 30px;
+            }
+
+            &--story{
+                font-size: calculadora-rem(15);
+                white-space: nowrap;
+
+                &:hover{
+                    .container--header--about-wrapper{
+                        height: 300px;
+                        width: 305px;
+                        transform: translateY(33px) translateX(-239px);
+                        font-size: calculadora-rem(15);
+                        border-top: 10px solid $borderColor;
+                        border-radius: 0 0 30px 30px;
+                        padding: 20;
+                        // line-height: px;
+                        white-space: normal;
+                    }
+                    
+                }
+            }
+        }
+
+        &--main{
+            font-size: calculadora-rem(20);
+
+            &--input-wrapper{
+
+                &--input{
+                    height: 35px;
+                    width: 300px;
+                    font-size: calculadora-rem(15);
+                }
+            }
+    
+            &--button-wrapper{
+    
+                &--button-all{
+                    height: 40px;
+                    width: 100px;
+                    margin: 0 50px;
+                    font-size: calculadora-rem(15);
+                    border-radius: 18px;
+                }
+            }
+        }
+
     }
 }
