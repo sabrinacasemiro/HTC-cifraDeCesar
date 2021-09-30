@@ -29,39 +29,39 @@ body{
             margin-right: 500px;
         }
 
-        &--about{
-            color: $borderColor;
-            font-size: calculadora-rem(30);
-            position: relative;
-            cursor: pointer;
-        }
-
         &--about-wrapper{
             display: none;
         }
 
-        &:hover {
-            .container--header--about-wrapper{
-                @include flexColumn;
-                height: 400px;
-                width: 600px;
-                position: absolute;
-                transform: translateY(250px) translateX(850px);
-                color: $textColor;
-                font-size: calculadora-rem(22);
-                border-top: 20px solid $borderColor;
-                border-radius: 0 30px 30px 30px;
-                box-sizing: border-box;
-                padding: 20px 20px;
-                background-color: $backgraundColorOpacity;
-                line-height: 30px;
+        &--story{
+            color: $borderColor;
+            font-size: calculadora-rem(30);
+            position: relative;
+            cursor: pointer;
 
-                &--source{
-                    color: $borderColor;
-                    font-weight: 600;
+            &:hover {
+                .container--header--about-wrapper{
+                    @include flexColumn;
+                    height: 400px;
+                    width: 600px;
+                    position: absolute;
+                    transform: translateY(38px) translateX(-200px);
+                    color: $textColor;
+                    font-size: calculadora-rem(22);
+                    border-top: 20px solid $borderColor;
+                    border-radius: 0 30px 30px 30px;
+                    box-sizing: border-box;
+                    padding: 20px 20px;
+                    background-color: $backgraundColorOpacity;
+                    line-height: 30px;
+    
+                    &--source{
+                        color: $borderColor;
+                        font-weight: 600;
+                    }
                 }
+                
             }
-            
         }
     }
 
@@ -104,6 +104,8 @@ body{
         &--result{
             border-bottom: 1px solid $borderColor;
             margin-bottom: 100px;
+            height: 50px;
+
         }
 
         &--button-wrapper{

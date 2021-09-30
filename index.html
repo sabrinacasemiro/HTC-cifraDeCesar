@@ -20,32 +20,44 @@
     <section class="container">
         <header class="container--header">
             <h1 class="container--header--title">Cifra de Cesar</h1>
-            <h2 class="container--header--about">O que é?</h2>
-            <div class="container--header--about-wrapper">
-                <p class="container--header--about-wrapper--text">Trata-se de um tipo de <b>cifra de substituição</b>, na qual cada letra de um texto a ser
-                    criptografado é substituída por outra letra, presente no alfabeto porém deslocada um certo número de
-                    posições à esquerda ou à direita. [...]</p>
-                <p class="container--header--about-wrapper--text">A cifra de César recebe esse nome pois, segundo o escritor Suetônio, foi utilizada por Júlio César
-                    para se comunicar com seus generais, protegendo mensagens militares.</p>
-                <a href="http://www.bosontreinamentos.com.br/seguranca/criptografia-cifra-de-cesar/" class="container--header--about-wrapper--source">Fonte</a>
+            <div class='container--header--story'>
+                <h2 class="container--header--about">O que é?</h2>
+                <div class="container--header--about-wrapper">
+                    <p class="container--header--about-wrapper--text">Trata-se de um tipo de <b>cifra de
+                            substituição</b>, na qual cada letra de um texto a ser
+                        criptografado é substituída por outra letra, presente no alfabeto porém deslocada um certo
+                        número de
+                        posições à esquerda ou à direita. [...]</p>
+                    <p class="container--header--about-wrapper--text">A cifra de César recebe esse nome pois, segundo o
+                        escritor Suetônio, foi utilizada por Júlio César
+                        para se comunicar com seus generais, protegendo mensagens militares.</p>
+                    <a href="http://www.bosontreinamentos.com.br/seguranca/criptografia-cifra-de-cesar/"
+                        class="container--header--about-wrapper--source">Fonte</a>
+                </div>
             </div>
         </header>
         <main class="container--main">
             <div class="container--main--input-wrapper">
                 <label for="key" class="container--main--input-wrapper--label">Escolha a chave</label>
-                <input type="number" placeholder="Digite a Chave" id="key" class="container--main--input-wrapper--input container--main--input-wrapper--input-key" >
+                <input type="number" placeholder="Digite a Chave" id="key"
+                    class="container--main--input-wrapper--input container--main--input-wrapper--input-key">
             </div>
             <div class="container--main--input-wrapper">
-                <label for="word" class="container--main--input-wrapper--label">Digite sua Frase</label>
-                <input placeholder='Digite sua Frase' id="word" class="container--main--input-wrapper--input container--main--input-wrapper--input-word">
+                <label for="word" class="container--main--input-wrapper--label">Digite sua Mensagem</label>
+                <input placeholder='Digite sua Mensagem' id="word"
+                    class="container--main--input-wrapper--input container--main--input-wrapper--input-word">
             </div>
-            <span class="container--main--result">Frase Criptografada</span>
+            <span class="container--main--result"></span>
             <div class="container--main--button-wrapper">
-                <button class="container--main--button-wrapper--button-all container--main--button-wrapper--button-encrypt">Criptografar</button>
-                <button class="container--main--button-wrapper--button-all container--main--button-wrapper--button-reset">Reiniciar</button>
+                <button
+                    class="container--main--button-wrapper--button-all container--main--button-wrapper--button-encrypt">Criptografar</button>
+                <button
+                    class="container--main--button-wrapper--button-all container--main--button-wrapper--button-reset">Reiniciar</button>
             </div>
         </main>
     </section>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
