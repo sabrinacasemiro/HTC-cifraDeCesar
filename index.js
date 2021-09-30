@@ -35,6 +35,14 @@ const resetResult = () => {
 }
 
 $buttonEncrypt.addEventListener('click', () => {
+    if(!$key.value){
+        $key.focus()
+        return
+    }
+    if(!$word.value){
+        $word.focus()
+        return
+    }
     resetResult()
     printEncrypt()
 })
