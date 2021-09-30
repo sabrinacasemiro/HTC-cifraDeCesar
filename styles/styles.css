@@ -279,9 +279,6 @@ body {
 }
 
 @media (max-width: 375px) {
-  .container {
-    overflow-y: auto;
-  }
   .container--header {
     border-bottom: 10px solid #160B26;
     border-radius: 5px;
