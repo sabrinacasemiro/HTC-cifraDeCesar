@@ -206,6 +206,7 @@ body{
 
 @media(max-width: 375px){
     .container{
+        overflow: auto;
 
         &--header{
             border-bottom: 10px solid $borderColor;
