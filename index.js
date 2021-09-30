@@ -16,9 +16,15 @@ const readArray = () => {
     for(let i = 0; i < letter.length; i++){
         let keyEncrypt = alphabet.indexOf(letter[i]) + parseInt($key.value)
         rotateArray = keyEncrypt % alphabet.length
-        encrypt += alphabet[rotateArray]
+        
+        if(letter[i] === ' '){
+            encrypt += ' '
+        } else{
+            encrypt += alphabet[rotateArray] 
+        }
+        console.log(keyEncrypt)
     }
-
+    console.log(encrypt)
     return encrypt
 }
 
