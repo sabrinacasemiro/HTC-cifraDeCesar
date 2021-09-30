@@ -7,7 +7,7 @@ body{
     background-color: $backgraundColor;
     font-family: $rubik;
     @include flexColumn;
-    overflow: auto
+    overflow: auto;
 }
 
 .container{
