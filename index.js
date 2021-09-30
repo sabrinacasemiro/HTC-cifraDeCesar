@@ -9,7 +9,7 @@ const $warnninWord = document.querySelector('.warning-word')
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const readArray = () => {
-    let letter = $word.value
+    let letter = $word.value.toLowerCase()
     let rotateArray = ''
     let encrypt = ''
     
@@ -22,9 +22,7 @@ const readArray = () => {
         } else{
             encrypt += alphabet[rotateArray] 
         }
-        console.log(keyEncrypt)
     }
-    console.log(encrypt)
     return encrypt
 }
 
